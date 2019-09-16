@@ -1,0 +1,24 @@
+
+#include "pch.h"
+#include <iostream>
+#include<string>
+#include<cstring>
+using namespace std;
+
+int main()
+{
+	string str;
+	string c;
+	str = "张三，你好13107936209泉州市";
+	int pos = 0;
+	while ((pos = str.find("1")) != -1)
+	{
+		c = str.substr(pos, pos + 1);
+		str.erase(pos, 11);
+	}
+	cout << c;
+	cout << endl;
+	cout << str;
+	cout << endl;
+
+}
